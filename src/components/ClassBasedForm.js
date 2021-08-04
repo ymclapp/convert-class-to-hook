@@ -50,7 +50,7 @@ export default class ClassBasedForm extends React.Component {
           </Col>
         </FormGroup>
         <FormGroup check row>
-          <Col sm={ { size: 10, offset: 8 } }>
+          <Col sm={ { size: 'auto', offset: 8 } }>
             <Button>Submit</Button>
           </Col>
         </FormGroup>
