@@ -8,8 +8,14 @@ const FunctionBasedForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    const handleSubmit = event => {
+        event.preventDefault();
+        console.log(email);
+        console.log(password);
+    }
+
     return (
-        <Form>
+        <Form onSubmit={ handleSubmit }>
             <h1>Function Based Form</h1>
             <FormGroup row>
                 <Label for="exampleEmail" sm={2}>Email</Label>
@@ -19,6 +25,8 @@ const FunctionBasedForm = () => {
                         name="email"
                         id="exampleEmail"
                         placeholder="email"
+                        value={ email }
+                        onChange={ event => setEmail(event.target.value) }
                     />
                 </Col>
             </FormGroup>
@@ -30,6 +38,8 @@ const FunctionBasedForm = () => {
                         name="password"
                         id="examplePassword"
                         placeholder="password"
+                        value={ password }
+                        onChange={ event => setPassword(event.target.value) }
                     />
                 </Col>
             </FormGroup>
